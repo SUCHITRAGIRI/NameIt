@@ -1,6 +1,6 @@
 body{
     background:rgb(35, 7, 63) ;
-    overflow: hidden;
+   /* overflow: visible;*/
     color: #e7e9f0;
     font-family: 'Lato', sans-serif;
 }

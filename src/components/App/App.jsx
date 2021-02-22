@@ -8,15 +8,14 @@ const name = require('@rstacruz/startup-name-generator');
 
 class App extends React.Component {
     state = {
-        headerText: 'Name It!',
-        headerExpanded: true,
+        expandedHeader: true,
         suggestedNames: [],
     };
 
     handleInputChange = (inputText) => {
-        name(inputText);
+        //name(inputText);
         this.setState({
-            headerExpanded: !inputText,
+            expandedHeader: !inputText,
             suggestedNames: inputText ? name(inputText) : [],
         });
 
@@ -24,10 +23,8 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <Header headerExpanded={this.state.headerExpanded}
-                    headTitle={this.state.headerText}
-                />
+            <div className="app-containter">
+                <Header expandedHeader={this.state.expandedHeader} />
                 <SearchBox onInputChange={this.handleInputChange} />
                 <ResultsContainer suggestedNames={this.state.suggestedNames} />
             </div >

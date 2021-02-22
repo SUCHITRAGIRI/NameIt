@@ -7,7 +7,8 @@ const NameCard = ({ suggestedNames }) => {
         <a
             target="blank"
             rel="moreferrer"
-            className='card-link' href={`${nameCheapUrl}${suggestedNames}`}>
+            className='card-link' href={`${nameCheapUrl}${suggestedNames}`}
+        >
             <div className="result-name-card">
                 <p className="result-nmae">{suggestedNames}</p>
             </div>

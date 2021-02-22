@@ -2,20 +2,25 @@ import React from 'react';
 import './Header.css';
 
 
-const Header = ({ headTitle, headerExpanded }) => {
+const Header = ({ expandedHeader }) => {
     return (
         <div className="head-container">
-            <img src=" https://user-images.githubusercontent.com/26179770/106359099-693e3380-6336-11eb-8069-9e36f25de5ca.png"
-                className={`head-image ${headerExpanded
-                    ? 'head-image-expanded'
-                    : 'head-image-contracted'
+            <img
+                src=" https://user-images.githubusercontent.com/26179770/106359099-693e3380-6336-11eb-8069-9e36f25de5ca.png"
+                className={`head-image ${expandedHeader
+                        ? 'head-image-expanded'
+                        : 'head-image-contracted'
                     }`}
-                alt={`head-text ${headerExpanded
-                    ? 'head-text-expanded'
-                    : 'head-text-contracted'
-                    }`} />
-            <h1 className="head-text">
-                {headTitle}</h1>
+                alt="header"
+            />
+            <h1
+                className={`head-text ${expandedHeader
+                        ? 'head-text-expanded'
+                        : 'head-text-contracted'
+                    }`}
+            >
+                Name It!
+            </h1>
         </div>
     );
 };
